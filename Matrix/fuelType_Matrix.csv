@@ -1,0 +1,6 @@
+fuelType,fuelType_Diesel,fuelType_Electric,fuelType_Hybrid,fuelType_Other,fuelType_Petrol
+Diesel,1,,,,
+Electric,,1,,,
+Hybrid,,,1,,
+Other,,,,1,
+Petrol,,,,,1
