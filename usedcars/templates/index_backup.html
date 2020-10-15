@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UK Car Price Estimator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">
+    <img src="Images/UK.jpeg" width="100" height="80" class="d-inline-block" alt="" loading="lazy">
+    <span><b class='text-uk text-center'> UK Car Sales Price Estimator </b></span>
+  </a>
+</nav>
+    <body>
+        <!-- <div class="container">
+            <div class="jumbotron" style="text-align: center">
+                <h1>Predicting Used car value</h1>
+                <p>Enter your details below!</p>
+            </div>
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8"> -->
+    <div class="wrapper">      
+        <div class="container-fluid">
+            <div class="row margin-top-30">
+            <div class="col-md-2">
+                <aside class="filters">
+                <div class="panel panel-default">
+                    <!-- <div class="panel-heading"><h4>Sales Price Estimator</h4></div> -->
+                    <div class="panel-body">
+                        <form method="POST" action="/" role="form", name="UsedCarPredictionForm">
+                            <ul class="list-group" id="filters">
+                                <li class="filter list-group-item">
+    
+                                        <div class="form-group">
+                                            <label>Car Make</label>
+                                            <select id="Make" name="carmake" placeholder="CarMake" class="form-control">
+                                                <option selected>Audi</option>
+                                                <option>Audi</option>
+                                                <option>BMW</option>
+                                                <option>Ford</option>
+                                                <option>Hyundai</option>
+                                                <option>Mercedes Benz</option>
+                                                <option>Skoda</option>
+                                                <option>Toyota</option>
+                                                <option>Volkswagen</option>
+                                            </select>
+                                        
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Car Model</label>
+                                            <select id="CarModel" name="carmodel" placeholder="CarModel" class="form-control">
+                                                <option selected>Model</option>
+                                                <option>A1</option>
+                                                <option>A2</option>
+                                                <option>A3</option>
+                                                <option>A4</option>
+                                                <option>A5</option>
+                                                <option>A6</option>
+                                                <option>A7</option>
+                                                <option>A8</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Purchase Year</label>
+                                            <select id="Year" name="purchaseyear" placeholder="Purchaseyear" class="form-control">
+                                                <option selected>Year</option>
+                                                <option>2020</option>
+                                                <option>2019</option>
+                                                <option>2018</option>
+                                                <option>2017</option>
+                                                <option>2016</option>
+                                                <option>2015</option>
+                                                <option>2014</option>
+                                                <option>2013</option>
+                                                <option>2012</option>
+                                                <option>2011</option>
+                                                <option>2010</option>
+                                                <option>2009</option>
+                                                <option>2008</option>
+                                                <option>2007</option>
+                                                <option>2006</option>
+                                                <option>2005</option>
+                                                <option>2004</option>
+                                                <option>2003</option>
+                                                <option>2002</option>
+                                                <option>2001</option>
+                                                <option>2000</option>
+                                                <option>1999</option>
+                                                <option>1998</option>
+                                                <option>1997</option>
+                                                <option>1996</option>
+                                                <option>1995</option>
+                                                <option>1994</option>
+                                                <option>1993</option>
+                                                <option>1992</option>
+                                                <option>1991</option>
+                                                <option>1990</option>
+                                            </select>
+                                            
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Transmission</label>
+                                            <select id="Transmission"  name="transmission" placeholder="Transmission" class="form-control">
+                                                <option selected>Transmission</option>
+                                                <option>Automatic</option>
+                                                <option>Manual</option>
+                                                <option>Other</option>
+                                                <option>Semi-Automatic</option>
+                                            </select>
+                                            
+                                        </div>
+                                        <div class="form-group">
+                                            <label>FuelType</label>
+                                            <select id="fuelType" name="fueltype" placeholder="FuelType" class="form-control">
+                                                <option selected>Fuel Type</option>
+                                                <option>Diesel</option>
+                                                <option>Electric</option>
+                                                <option>Hybrid</option>
+                                                <option>Other</option>
+                                                <option>Petrol</option>
+                                            </select>
+                                            
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Mileage</label>
+                                            <input type="text" class="form-control" name="mileage" placeholder="Mileage">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>MPG</label>
+                                            <input type="text" class="form-control" name="mpg" placeholder="MPG">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>EngineSize</label>
+                                            h6 class="SideBarHeader">Engine Size: <span id="engineSizeValue"></span> Liters</h6>
+                                            <div class="slidecontainer">
+                                                <input id="engineSize" class="form-control" name="enginesize" placeholder="EngineSize" class="slider" type="range" step="0.1" min="0" max="6.6" value="3.1" name="Engine Size">
+                                            </div>
+                                            
+                                        </div>
+                                        
+                        <!-- <input type="submit" value="submit" class="btn btn-default"> -->
+                                                      
+                                </li>
+                            </ul>
+                        
+                            <div class="row">
+                                <div class="col-sm-12 text-center">
+                                <button id="filter-btn" type="button" class="btn btn-dark btn-md">Run Results</button>
+                                <button id="reset-btn" type="button" class="btn btn-dark btn-md">Reset</button>
+                                </div>
+                                <br>
+                                <br>
+                            </div>
+
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8">
+                    <h1>{{ message }}</h1>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
