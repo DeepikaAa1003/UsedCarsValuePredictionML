@@ -8,7 +8,7 @@ import os
 app = Flask(__name__)
 
 # with open(f'best_logistic_reg_model.pickle', "rb") as f:
-filepath =  os.path.join("usedcars", "data", 'best_logistic_reg_model.pickle')
+filepath =  os.path.join("usedcars", "data", 'best_xgb_pipeline_model.pickle')
 
 with open(filepath, "rb") as f:
     model = pickle.load(f)
@@ -21,17 +21,26 @@ def home():
     output_message = ""
 
     if request.method == "POST":
-        recency = float(request.form["recency"])
-        frequency = float(request.form["frequency"])
-        monetary = float(request.form["monetary"])
-        time = float(request.form["time"])
-
+        carmake = request.form["carmake"]
+        carmodel = request.form["carmodel"]
+        purchaseyear = int(request.form["purchaseyear"])
+        transmission = request.form["transmission"]
+        fueltype = request.form["fueltype"]
+        mileage = float(request.form["mileage"])
+        mpg = float(request.form["mpg"])
+        enginesize = float(request.form["enginesize"])
+        print(f'model is {carmake}')
+        
         # data must be converted to df with matching feature names before predict
         # data = pd.DataFrame(np.array([[recency, frequency, monetary, time]]), columns=feature_names)
         testdata = np.array([[1.17]])
-        result = model.predict(testdata)
-        output_message = f'Please check results === {result}'
-    
+        rawdata = pd.DataFrame(np.array([[carmodel,purchaseyear,transmission,mileage,fueltype,mpg,enginesize,carmake]]), columns=['model','year','transmission','mileage','fuelType','mpg','engineSize','make'])
+        
+        # result = model.predict(testdata)
+        # output_message = f'Please check results === {carmake} and ======{carmodel} ======== {purchaseyear} ======= {transmission}============={fueltype}============{mileage}======={mpg} ==== {enginesize}'
+        result = model.predict(rawdata)
+        output_message = f'Please check results =========={result}'
+        
     return render_template("index.html", message = output_message)
 
 if __name__ == "__main__":
