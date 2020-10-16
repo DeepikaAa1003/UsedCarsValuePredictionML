@@ -1,0 +1,9 @@
+make,make_Audi,make_BMW,make_Ford,make_Hyundi,make_Mercedes Benz,make_Skoda,make_Toyota,make_Volkswagen
+Audi,1,,,,,,,
+BMW,,1,,,,,,
+Ford,,,1,,,,,
+Hyundi,,,,1,,,,
+MercedesBenz,,,,,1,,,
+Skoda,,,,,,1,,
+Toyota,,,,,,,1,
+Volkswagen,,,,,,,,1

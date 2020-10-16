@@ -1,0 +1,5 @@
+transmission,transmission_Automatic,transmission_Manual,transmission_Other,transmission_Semi-Auto
+Automatic,1,0,0,0
+Manual,0,1,0,0
+Other,0,0,1,0
+Semi-Auto,0,0,0,1
