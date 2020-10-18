@@ -1,5 +1,4 @@
 
-var action = " ";
 // Engine Size Sliders
 var engineSlider = document.getElementById("engineSize");
 var engineOutput = document.getElementById("engineSizeValue");
@@ -11,7 +10,7 @@ engineSlider.oninput = function() {
 }
 
 // Car Make Dropdown Selection
-// Load CSV File
+// Load CSV File to populate drop down values
 function dropdownSelection (){
     d3.csv("static/js/Make_Model_Only.csv").then(function(data){
         console.log(data);
@@ -88,56 +87,56 @@ function makeImages(){
     var endstaticString = "')}}";
     switch (makeName) {
         case "Audi":
-        iframe.src = "https://public.tableau.com/views/Audi_16029044702250/PricebyModel?:showVizHome=no&:embed=true";
+        iframe.src = "https://public.tableau.com/views/Audi2_16029849782280/Dashboard1?:showVizHome=no&:embed=true";
         for (var i = 1; i<=5; i++){
           document.getElementById(`Image${i}`).src = `static/images/Audi_${i}.jpg`;
         };
         console.log("1")
           break;
         case "BMW":
-        iframe.src = "https://public.tableau.com/views/BMW_16029136971440/Sheet1?:showVizHome=no&:embed=true";
+        iframe.src = "https://public.tableau.com/views/BMW_16029136971440/Dashboard1?:showVizHome=no&:embed=true";
         for (var i = 1; i<=5; i++){
           document.getElementById(`Image${i}`).src = `static/images/BMW_${i}.jpg`;
         };
         console.log("2")
           break;
         case "Ford":
-        iframe.src = "https://public.tableau.com/views/Ford_16029142764510/Sheet1?:showVizHome=no&:embed=true";
+        iframe.src = "https://public.tableau.com/views/Ford_16029142764510/Dashboard1?:showVizHome=no&:embed=true";
         for (var i = 1; i<=5; i++){
           document.getElementById(`Image${i}`).src = `static/images/ford_${i}.jpg`
         };
         console.log("3")
           break;
         case "Hyundi":
-        iframe.src = "https://public.tableau.com/views/Hyundai_16029147545360/Sheet1?:showVizHome=no&:embed=true";
+        iframe.src = "https://public.tableau.com/views/Hyundai_16029147545360/Dashboard1?:showVizHome=no&:embed=true";
         for (var i = 1; i<=5; i++){
           document.getElementById(`Image${i}`).src = `static/images/Hyundi_${i}.jpg`
         };
         console.log("4")
           break;
         case "Mercedes Benz":
-        iframe.src = "https://public.tableau.com/views/Mercedes_16029153489260/Sheet1?:showVizHome=no&:embed=true";
+        iframe.src = "https://public.tableau.com/views/Mercedes_16029153489260/Dashboard1?:showVizHome=no&:embed=true";
         for (var i = 1; i<=5; i++){
           document.getElementById(`Image${i}`).src = `static/images/Mercedes_Benz_${i}.jpg`
         };
         console.log("5")
           break;
         case "Skoda":
-        iframe.src ="https://public.tableau.com/views/Skoda/Sheet1?:showVizHome=no&:embed=true";
+        iframe.src ="https://public.tableau.com/views/Skoda/Dashboard1?:showVizHome=no&:embed=true";
         for (var i = 1; i<=5; i++){
           document.getElementById(`Image${i}`).src = `static/images/skoda_${i}.jpg`
         };
         console.log("6")
           break;
         case "Toyota":
-        iframe.src ="https://public.tableau.com/views/Toyota_16029161101880/Sheet1?:showVizHome=no&:embed=true";
+        iframe.src ="https://public.tableau.com/views/Toyota_16029161101880/Dashboard1?:showVizHome=no&:embed=true";
         for (var i = 1; i<=5; i++){
           document.getElementById(`Image${i}`).src = `static/images/toyota_${i}.jpg`
         };
         console.log("7")
           break;
         case "Volkswagen":
-        iframe.src ="https://public.tableau.com/views/VW_16029163851660/Sheet1?:showVizHome=no&:embed=true";
+        iframe.src ="https://public.tableau.com/views/VW_16029163851660/Dashboard1?:showVizHome=no&:embed=true";
         for (var i = 1; i<=5; i++){
           document.getElementById(`Image${i}`).src = `static/images/Volkswagen_${i}.jpg`
         };
@@ -193,9 +192,7 @@ function numericValidation() {
       var formattedPoundValue = data.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
       var data_value = Math.round(parseFloat(data.replace(/,/g, '')) * 1.291)
       var usdTotal = data_value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-     
-      document.getElementById('result').innerHTML = `Estimated Sales Price: &#163;${formattedPoundValue} / $ ${usdTotal}`;
-    // document.getElementById('USDResult').innerHTML = `Estimated Sales Price: USD$ ${usdTotal}`;
+      document.getElementById('result').innerHTML = `Estimated Sales Price: &#163;${formattedPoundValue} | USD$ ${usdTotal}`;
     console.log(data)});
 
     makeImages();
