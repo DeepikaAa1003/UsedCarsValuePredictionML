@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UK Car Price Estimator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet">
+</head>
+
+<!-- navigation Bar-------------------------------------------------------------------------------------------------------------------- -->
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">
+    <img src="{{url_for('static', filename='images/UK.jpeg')}}" width="100" height="80" class="d-inline-block" alt="" loading="lazy">
+    <span><b class='text-uk text-center'> UK Car Sales Price Estimator </b></span>
+  </a>
+</nav>
+<br>
+<br>
+
+<!-- Main Body-------------------------------------------------------------------------------------------------------------------------- -->
+<body>
+    <div class="wrapper">      
+          <div class="container-fluid">
+            <div class="row margin-top-30">
+
+
+            <!-- Parameter Selection Column--------------------------------------------------------------------------------------------- -->
+              <div class="col-md-2">
+                <aside class="filters">
+                  <div class="panel panel-default">
+                    <!-- <div class="panel-heading"><h4>Sales Price Estimator</h4></div> -->
+                    <div class="panel-body">
+                        <!-- <form id = "form-id" method="POST" action="/" role="form", name="UsedCarPredictionForm"> -->
+                        <form id = "form-id" method="POST" role="form", name="UsedCarPredictionForm"></form>
+                        <div class="form-group">
+                          <ul class="list-group" id="filters">
+                            <li class="filter list-group-item">
+                              <label for="criteria"><h5>Select Criteria for Price Estimation</h5></label>
+                              <br>
+                              <!-- Car Make Options -->
+                              <div class="form-group">
+                                <label>Car Make</label>
+                                <select id="Make" name="carmake" placeholder="CarMake" class="form-control">
+                                  <!-- <option selected>Make</option> -->
+                                  <option value = "Audi">Audi</option>
+                                  <option value = "BMW">BMW</option>
+                                  <option value = "Ford">Ford</option>
+                                  <option value = "Hyundi">Hyundi</option>
+                                  <option value = "Mercedes Benz">Mercedes Benz</option>
+                                  <option value = "Skoda">Skoda</option>
+                                  <option value = "Toyota">Toyota</option>
+                                  <option value = "Volkswagen">Volkswagen</option>
+                                </select>
+                            
+                                </div>
+                              <div class="form-group">
+                                <label>Car Model</label>
+                                <select id="Model" name="carmodel" placeholder="CarModel" class="form-control">
+                                    <!-- <option selected>Model</option> -->
+                                    <option>A1</option>
+                                    <option>A2</option>
+                                    <option>A3</option>
+                                    <option>A4</option>
+                                    <option>A5</option>
+                                    <option>A6</option>
+                                    <option>A7</option>
+                                    <option>A8</option>
+                                    <option>Q2</option>
+                                    <option>Q3</option>
+                                    <option>Q5</option>
+                                    <option>Q7</option>
+                                    <option>Q8</option>
+                                    <option>R8</option>
+                                    <option>RS3</option>
+                                    <option>RS4</option>
+                                    <option>RS5</option>
+                                    <option>RS6</option>
+                                    <option>RS7</option>
+                                    <option>S3</option>
+                                    <option>S4</option>
+                                    <option>S5</option>
+                                    <option>S8</option>
+                                    <option>SQ5</option>
+                                    <option>SQ7</option>
+                                    <option>TT</option>
+                                </select>
+                              </div>
+                            
+                              <div class="form-group">
+                                <label>Purchase Year</label>
+                                <select id="Year" name="purchaseyear" placeholder="Purchaseyear" class="form-control">
+                                    <!-- <option selected>Year</option> -->
+                                    <option>2020</option>
+                                    <option>2019</option>
+                                    <option>2018</option>
+                                    <option>2017</option>
+                                    <option>2016</option>
+                                    <option>2015</option>
+                                    <option>2014</option>
+                                    <option>2013</option>
+                                    <option>2012</option>
+                                    <option>2011</option>
+                                    <option>2010</option>
+                                    <option>2009</option>
+                                    <option>2008</option>
+                                    <option>2007</option>
+                                    <option>2006</option>
+                                    <option>2005</option>
+                                    <option>2004</option>
+                                    <option>2003</option>
+                                    <option>2002</option>
+                                    <option>2001</option>
+                                    <option>2000</option>
+                                    <option>1999</option>
+                                    <option>1998</option>
+                                    <option>1997</option>
+                                    <option>1996</option>
+                                    <option>1995</option>
+                                    <option>1994</option>
+                                    <option>1993</option>
+                                    <option>1992</option>
+                                    <option>1991</option>
+                                    <option>1990</option>
+                                </select>  
+                              </div>
+                              <div class="form-group">
+                                <label>Transmission</label>
+                                <select id="Transmission"  name="transmission" placeholder="Transmission" class="form-control">
+                                    <!-- <option selected>Transmission</option> -->
+                                    <option>Automatic</option>
+                                    <option>Manual</option>
+                                    <option>Other</option>
+                                    <option>Semi-Auto</option>
+                                </select>
+                               </div>
+
+                            <div class="form-group">
+                                <label>FuelType</label>
+                                <select id="fuelType" name="fueltype" placeholder="FuelType" class="form-control">
+                                    <!-- <option selected>Fuel Type</option> -->
+                                    <option>Diesel</option>
+                                    <option>Electric</option>
+                                    <option>Hybrid</option>
+                                    <option>Other</option>
+                                    <option>Petrol</option>
+                                </select>      
+                            </div>
+
+                            <div class="form-group">
+                                <label>Miles</label>
+                                <input id = "Miles" type="text" value = "0" class="form-control" name="mileage" placeholder="Mileage">
+                            </div>
+                            <div class="form-group">
+                                <label>MPG</label>
+                                <input id = "mpg" type="text" value = "34" class="form-control" name="mpg" placeholder="MPG">
+                            </div>
+
+                            <div class="form-group">
+                                <!-- <label>EngineSize</label> -->
+                                <h6 class="SideBarHeader">Engine Size: <span id="engineSizeValue"></span> Liters</h6>
+                                <div class="slidecontainer">
+                                    <input id="engineSize" class="form-control slider" name="enginesize" placeholder="EngineSize" class="slider" type="range" step="0.1" min="0" max="6.6" value="3.1" name="Engine Size">
+                                </div>                      
+                            </div>
+                            
+                              
+                            </li>
+                          </ul>
+                        </div>
+
+
+                        <div class="row">
+                          <div class="col-sm-12 text-center">
+                            <!-- <button id="filter-btn" type="button" class="btn btn-dark btn-md">Run Results</button>-->
+                            <button id="reset-btn" type="button" class="btn btn-dark btn-md">Reset</button>
+                            <button id = "submit-btn" type="submit" value="Estimate" class="btn btn-dark btn-md">Estimate</button>
+                          </div>
+                          <br>
+                          <br>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </aside>
+            </div>
+
+            <!--  Car Carousel-------------------------------------------------------------------------------------------------------------------------------------------- -->
+            <div class="col-md-1"> 
+              <br>
+            </div>
+
+                <div class="col-md-8">
+                    <div class="row">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                <img id = "Image1" src="{{url_for('static', filename='images/Audi_1.jpg')}}" class="d-block w-100" alt="Audi A1-1" width="900px" height="600px">
+                                </div>
+                                <div class="carousel-item">
+                                <img id = "Image2" src="{{url_for('static', filename='images/Audi_2.jpg')}}" class="d-block w-100" alt="Audi A1-2" width="900px" height="600px">
+                                </div>
+                                <div class="carousel-item">
+                                <img id = "Image3" src="{{url_for('static', filename='images/Audi_3.jpg')}}" class="d-block w-100" alt="Audi A1-3" width="900px" height="600px">
+                                </div>
+                                <div class="carousel-item">
+                                <img id = "Image4" src="{{url_for('static', filename='images/Audi_4.jpg')}}" class="d-block w-100" alt="Audi A1-4" width="900px" height="600px">
+                                </div>
+                                <div class="carousel-item">
+                                <img id = "Image5" src="{{url_for('static', filename='images/Audi_5.jpg')}}" class="d-block w-100" alt="Audi A1-5" width="900px" height="600px">
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="false"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="false"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                    <br>
+                    <br>  
+                
+
+            <!-- Estimation Results --------------------------------------------------------------------------------------------------------------------->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="alert alert-secondary text-center" role="alert">
+                                <h1 id = 'result'></h1>
+                                <h1 id = 'USDResult'></h1>
+                            </div>
+                        </div>
+                    </div>
+
+            <!-- Tableau Results----------------------------------------------------------------------------------------------------------------------- -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <iframe id= "ifrm" src = "https://public.tableau.com/views/Audi2_16029849782280/Dashboard1?:showVizHome=no&:embed=true" width="100%" height="800" frameborder="0"></iframe>
+                            <!-- <iframe id = "BMW" src="https://public.tableau.com/views/BMW_16029136971440/Sheet1?:showVizHome=no&:embed=true" width="100%" height="700" frameborder="0"></iframe>
+                            <iframe id ="Ford" src="https://public.tableau.com/views/Ford_16029142764510/Sheet1?:showVizHome=no&:embed=true" width="100%" height="700" frameborder="0"></iframe>
+                            <iframe id = "Hyundai" src="https://public.tableau.com/views/Hyundai_16029147545360/Sheet1?:showVizHome=no&:embed=true" width="100%" height="700" frameborder="0"></iframe>
+                            <iframe id = "Mercedes" src="https://public.tableau.com/views/Mercedes_16029153489260/Sheet1?:showVizHome=no&:embed=true" width="100%" height="700" frameborder="0"></iframe>
+                            <iframe id = "Skoda" src="https://public.tableau.com/views/Skoda/Sheet1?:showVizHome=no&:embed=true" width="100%" height="700" frameborder="0"></iframe>
+                            <iframe id ="Toyota" src="https://public.tableau.com/views/Toyota_16029161101880/Sheet1?:showVizHome=no&:embed=true" width="100%" height="700" frameborder="0"></iframe>
+                            <iframe id= "VW" src="https://public.tableau.com/views/VW_16029163851660/Sheet1?:showVizHome=no&:embed=true" width="100%" height="700" frameborder="0"></iframe> -->
+                        </div>
+                    </div>
+                </div>        
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <span class="bottom">Copyright @ Adriana Ovalle, Deepika Awasthi, Maria Lara 2020</span>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="{{url_for('static', filename='js/main_script.js')}}"></script>
+</body>
+</html>
