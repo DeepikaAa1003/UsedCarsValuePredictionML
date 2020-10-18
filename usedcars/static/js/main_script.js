@@ -70,8 +70,6 @@ function resetSearch(){
     })
 
     document.getElementById("result").innerHTML = " ";
-    // var modelDefaultOption = modelDropDown.append("option");
-    // modelDefaultOption.text("Model").property("value","Model");
 
 }
 
@@ -193,17 +191,11 @@ function numericValidation() {
     .then(data => { 
 
       var formattedPoundValue = data.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-      
-      document.getElementById('result').innerHTML = `Estimated Sales Price: &#163;${formattedPoundValue}`;
-   
-    var data_value = Math.round(parseFloat(data.replace(/,/g, '')) * 1.291)
-
-   
-    var usdTotal = data_value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-
-   
-    
-    document.getElementById('USDResult').innerHTML = `Estimated Sales Price: USD$ ${usdTotal}`;
+      var data_value = Math.round(parseFloat(data.replace(/,/g, '')) * 1.291)
+      var usdTotal = data_value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+     
+      document.getElementById('result').innerHTML = `Estimated Sales Price: &#163;${formattedPoundValue} / $ ${usdTotal}`;
+    // document.getElementById('USDResult').innerHTML = `Estimated Sales Price: USD$ ${usdTotal}`;
     console.log(data)});
 
     makeImages();
