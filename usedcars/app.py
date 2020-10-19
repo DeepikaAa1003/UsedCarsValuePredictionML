@@ -6,7 +6,7 @@ import os
 # Create an instance of Flask
 app = Flask(__name__)
 
-filepath =  os.path.join("usedcars", "data", 'best_xgb_pipeline_model.pickle')
+filepath =  os.path.join("usedcars", "data", 'best_xgb_model.pickle')
 
 def loadmodel():
 
