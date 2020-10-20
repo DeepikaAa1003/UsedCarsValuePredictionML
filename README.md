@@ -27,12 +27,12 @@ The following workflow was used to test 8 different regression models.
 ![Figure4](usedcars/static/images/Image4.png)
 
 ## Models Analyzed
- XGB egressor was selected at the moment of code freeze because of its high accuracy compared to the other models. Results of each model are presented in the table below.
+ XGB regressor was selected at the moment of code freeze because of its high accuracy compared to the other models. Results of each model are presented in the table below.
 
 ![Figure5](usedcars/static/images/Image5.png)
 
 ## XGB Regressor Test
-20 random samples were selected to test the XGB Regressor model. The predicted vs actual difference is below 4%.
+20 random samples were selected to test the XGB Regressor model. The predicted vs actual difference is below +/-4%.
 
 ![Figure6](usedcars/static/images/Image6.png)
 
