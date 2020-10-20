@@ -45,4 +45,4 @@ The user interface allows the for the use to:
      * Graph of selected Car Make is updated. User then can change options for year, model, fuel type and transmission to visualize the range of the price data
 * The reset button will reset the estimation of the pricing.
 
-![Figure7](images/Image7.GIF)
+![Figure7](images/Image7.gif)
