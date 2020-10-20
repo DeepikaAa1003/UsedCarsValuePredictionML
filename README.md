@@ -1,5 +1,5 @@
 # UK Used Cars Price Estimaton App
-## By Adriana Ovalle, Deepika Awasthi & Maria Lara
+By Adriana Ovalle, Deepika Awasthi & Maria Lara
 
 ## Objective
 This application helps estimating UK used cars price based on:  make, model, year, transmission, mileage, fuel type, miles per gallon (mpg), and engine size.
