@@ -37,7 +37,7 @@ The following workflow was used to test 8 different regression models.
 ![Figure6](usedcars/static/images/Image6.png)
 
 ## User Interface
-The user interface allows the for the user to:
+The user interface allows for the user to:
 * Enter 8 criteria parameters: Car Make, Car Model, Purchase Year, Transmission, FuelType, Miles, MPG and Engine Size
 * On "Estimate" button click, the following is updated:
      * Car images are updated according to Car Make selected
