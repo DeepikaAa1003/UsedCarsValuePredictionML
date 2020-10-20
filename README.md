@@ -11,7 +11,7 @@ The data was downloded from Kaggle at: https://www.kaggle.com/adityadesai13/used
 
 ## Architecture
 * For Storage: Amazon Simple Storage Service (Amazon S3) was used because of it offering on scalability, data availability, security, and performance. 
-* For Application Deployment: Heroku was used as cloud platform to deploy the application becasue its suppprt of different programming languages.
+* For Application Deployment: Heroku was used as cloud platform to deploy the application becasue its suppport of different programming languages.
 ![Figure2](images/Image2.png)
 
 ## Technologies Used
@@ -31,4 +31,9 @@ The following workflow was used to test 8 different regression models.
 ![Figure6](images/Image6.png)
 
 ## User Interface
-The user 
+The user interface allows the for the use to:
+* Enter 8 criteria parameters: Car Make, Car Model, Purchase Year, Transmission, FuelType, Miles, MPG and Engine Size
+* On "Estimate" button click, the following is updated:
+     * Car images are updated according to Car Make selected
+     * Estimation of used car price is show in £ and USD, based on the XGB regressor
+     * Graph of selected Car Make is updated. User then can change options for year, model, fuel type and transmission to visualize the range of the price data
