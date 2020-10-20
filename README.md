@@ -4,7 +4,8 @@ By Adriana Ovalle, Deepika Awasthi & Maria Lara
 ![Figure1](images/Image1.png)
 
 ## Objective
-This application helps estimating UK used cars price based on:  make, model, year, transmission, mileage, fuel type, miles per gallon (mpg), and engine size
+This application helps estimating UK used cars price based on:  make, model, year, transmission, mileage, fuel type, miles per gallon (mpg), and engine size.
+The application can be accessed at: https://usedcarspredict.herokuapp.com/
 
 ## Data Source
 The data was downloded from Kaggle at: https://www.kaggle.com/adityadesai13/used-car-dataset-ford-and-mercedes?select=vw.csv. It contains 100,000 scraped used car listings, cleaned and split into car make. The lasy update was done in June, 2020.
