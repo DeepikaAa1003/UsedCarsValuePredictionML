@@ -8,11 +8,11 @@ This application helps estimating UK used cars price based on:  make, model, yea
 The application can be accessed at: https://usedcarspredict.herokuapp.com/
 
 ## Data Source
-The data was downloded from Kaggle at: https://www.kaggle.com/adityadesai13/used-car-dataset-ford-and-mercedes?select=vw.csv. It contains 100,000 scraped used car listings, cleaned and split into car make. The lasy update was done in June, 2020.
+The data was downloded from Kaggle at: https://www.kaggle.com/adityadesai13/used-car-dataset-ford-and-mercedes?select=vw.csv. It contains 100,000 scraped used car listings, cleaned and split into car make. The last update was done in June, 2020.
 
 ## Architecture
-* For Storage: Amazon Simple Storage Service (Amazon S3) was used because of it offering on scalability, data availability, security, and performance. 
-* For Application Deployment: Heroku was used as cloud platform to deploy the application becasue its suppport of different programming languages.
+* For Storage: Amazon Simple Storage Service (Amazon S3) was used because of its offering on scalability, data availability, security, and performance. 
+* For Application Deployment: Heroku was used as cloud platform to deploy the application because its suppport of different programming languages.
 
 ![Figure2](images/Image2.png)
 
@@ -27,17 +27,17 @@ The following workflow was used to test 8 different regression models.
 ![Figure4](images/Image4.png)
 
 ## Models Analyzed
- XGB egressor was selected at the moment of code freeze because of its high accuracy comapred to the other models. Results of each model are presented in the table below.
+ XGB regressor was selected at the moment of code freeze because of its high accuracy compared to the other models. Results of each model are presented in the table below.
 
 ![Figure5](images/Image5.png)
 
 ## XGB Regressor Test
-20 random samples were selected to test the XGB Regressor model. The predicted vs actual difference is below 4%.
+20 random samples were selected to test the XGB Regressor model. The predicted vs actual difference is below +/-4%.
 
 ![Figure6](images/Image6.png)
 
 ## User Interface
-The user interface allows the for the use to:
+The user interface allows the for the user to:
 * Enter 8 criteria parameters: Car Make, Car Model, Purchase Year, Transmission, FuelType, Miles, MPG and Engine Size
 * On "Estimate" button click, the following is updated:
      * Car images are updated according to Car Make selected
