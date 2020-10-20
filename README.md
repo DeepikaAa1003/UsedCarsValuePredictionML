@@ -43,5 +43,6 @@ The user interface allows the for the use to:
      * Car images are updated according to Car Make selected
      * Estimation of used car price is show in £ and USD, based on the XGB regressor
      * Graph of selected Car Make is updated. User then can change options for year, model, fuel type and transmission to visualize the range of the price data
+* The reset button will reset the estimation of the pricing
 
 ![Figure7](images/Image7.GIF)
