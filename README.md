@@ -1,4 +1,4 @@
-# UK Used Cars Price Estimaton App
+# UK Used Cars Price Estimator App
 By Adriana Ovalle, Deepika Awasthi & Maria Lara
 
 ## Objective
