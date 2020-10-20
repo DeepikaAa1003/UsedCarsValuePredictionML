@@ -8,5 +8,6 @@ This application helps estimating UK used cars price based on:  make, model, yea
 The data was downloded from Kaggle at: https://www.kaggle.com/adityadesai13/used-car-dataset-ford-and-mercedes?select=vw.csv
 
 ## Architecture
+![Figure1](images/Image1.gif)
 
 
