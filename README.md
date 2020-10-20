@@ -20,3 +20,6 @@ The data was downloded from Kaggle at: https://www.kaggle.com/adityadesai13/used
 
 ## Models Analyzed
 ![Figure5](images/Image5.png)
+
+## XGB Regressor Test
+![Figure6](images/Image6.png)
