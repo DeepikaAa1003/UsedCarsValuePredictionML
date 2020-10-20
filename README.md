@@ -8,7 +8,7 @@ This application helps estimating UK used cars price based on:  make, model, yea
 The application can be accessed at: https://usedcarspredict.herokuapp.com/
 
 ## Data Source
-The data was downloded from Kaggle at: https://www.kaggle.com/adityadesai13/used-car-dataset-ford-and-mercedes?select=vw.csv. It contains 100,000 scraped used car listings, cleaned and split into car make. The lasy update was done in June, 2020.
+The data was downloded from Kaggle at: https://www.kaggle.com/adityadesai13/used-car-dataset-ford-and-mercedes?select=vw.csv. It contains 100,000 scraped used car listings, cleaned and split into car make. The last update was done in June, 2020.
 
 ## Architecture
 * For Storage: Amazon Simple Storage Service (Amazon S3) was used because of it offering on scalability, data availability, security, and performance. 
