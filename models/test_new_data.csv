@@ -1,0 +1,2 @@
+model,year,transmission,mileage,fuelType,mpg,engineSize,make
+ A1,2017,Manual,15735,Petrol,55.4,1.4,Audi
