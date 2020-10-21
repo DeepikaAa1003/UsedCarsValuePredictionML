@@ -27,7 +27,7 @@ The following workflow was used to test 8 different regression models.
 ![Figure4](usedcars/static/images/Image4.png)
 
 ## Models Analyzed
- XGB regressor was selected at the moment of code freeze because of its high accuracy compared to the other models. Results of each model are presented in the table below.
+ XGB (Xtreme Gradient Boosting) regressor was selected at the moment of code freeze because of its high accuracy compared to the other models. Results of each model are presented in the table below.
 
 ![Figure5](usedcars/static/images/Image5.png)
 
